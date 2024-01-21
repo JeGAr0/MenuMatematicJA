@@ -274,7 +274,7 @@ static bool EsPrimer(int num1)
     return true;
 }
 
-// [8] CALCULAR N NUMEROS PRIMERS
+// [8] CALCULAR N NUMEROS PRIMERS 
 static string NnumerosPrimers(int numDonat, int QuantsNums)
 {
     string valors = "";
