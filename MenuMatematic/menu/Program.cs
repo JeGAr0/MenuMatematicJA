@@ -1,5 +1,7 @@
 ﻿int num1 = 0, num2 = 0;
 char seleccionarOpcio;
+Console.CursorVisible = false;
+Console.ForegroundColor = ConsoleColor.Red;
 
 do
 {
@@ -56,6 +58,7 @@ do
             num1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Introdueix el valor de m: ");
             num2 = Convert.ToInt32(Console.ReadLine());
+
             if (num1 > num2)
             {
                 Console.WriteLine("n! / m!(n-m)! = " + Combinatori(num1, num2));
@@ -67,7 +70,59 @@ do
                 CompteEnrera();
                 goto case '5';
             }
-            
+            break;
+
+        case '6':
+            EsborraConsola();
+            Console.Write("Introdueix el numero per trobar els seus divisors: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            if (DivisorMajor(num1) != -1)
+            {
+                Console.WriteLine("El divisor major es: " + DivisorMajor(num1));
+                CompteEnrera();
+            }
+            else
+            {
+                Console.WriteLine("Es un numero primer");
+                CompteEnrera();
+            }
+            break;
+
+        case '7':
+            EsborraConsola();
+            Console.Write("Introdueix el numero per saber si es primer: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            if (EsPrimer(num1) == true)
+            {
+                Console.WriteLine("ES PRIMER 1, " + num1);
+                CompteEnrera();
+            }
+            else
+            {
+                Console.WriteLine("NO ES PRIMER");
+                CompteEnrera();
+            }
+            break;
+
+        case '8':
+            EsborraConsola();
+            Console.Write("Introdueix el numero: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Introdueix els primers que es volen trobar: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            if (NnumerosPrimers(num1, num2) == "ERROR")
+            {
+                Console.WriteLine("No s'han trobat numeros primers");
+                CompteEnrera();
+            }
+            else
+            {
+                Console.WriteLine("Resultat: " + NnumerosPrimers(num1, num2));
+                CompteEnrera();
+            }
             break;
 
     }
@@ -77,16 +132,41 @@ do
 // MENU DE LES OPCIONS
 static void Menu()
 {
-    Console.WriteLine("\n--- Selecciona una opcio ---");
-    Console.WriteLine("1. Calcular Maxim");
-    Console.WriteLine("2. Calcular MCD");
-    Console.WriteLine("3. Calcular MCM");
-    Console.WriteLine("4. Calcular Factorial");
-    Console.WriteLine("5. Calcular Combinatori");
-    Console.WriteLine("6. Mostrar Divisor Major");
-    Console.WriteLine("7. Verificar si es Primer");
-    Console.WriteLine("8. N Numeros Primers");
-    Console.WriteLine("9. SORTIR");
+
+    Console.Write(Centrar(DateTime.Now.ToString("ddd dd MMM")));
+
+    Console.WriteLine(Centrar("                                           "));
+    Console.WriteLine(Centrar("                                           "));
+    Console.WriteLine(Centrar("                ▄▀▄     ▄▀▄                "));
+    Console.WriteLine(Centrar("               ▄█░░▀▀▀▀▀░░█▄               "));
+    Console.WriteLine(Centrar("           ▄▄  █░░░░░░░░░░░█  ▄▄           "));
+    Console.WriteLine(Centrar("          █▄▄█ █░░▀░░┬░░▀░░█ █▄▄█          "));
+
+
+    Console.WriteLine(Centrar(" ---------- Selecciona una opcio --------- "));
+    Console.WriteLine(Centrar("|                                         |"));
+    Console.WriteLine(Centrar("|        1. Calcular Maxim                |"));
+    Console.WriteLine(Centrar("|        2. Calcular MCD                  |"));
+    Console.WriteLine(Centrar("|        3. Calcular MCM                  |"));
+    Console.WriteLine(Centrar("|        4. Calcular Factorial            |"));
+    Console.WriteLine(Centrar("|        5. Calcular Combinatori          |"));
+    Console.WriteLine(Centrar("|        6. Mostrar Divisor Major         |"));
+    Console.WriteLine(Centrar("|        7. Verificar si es Primer        |"));
+    Console.WriteLine(Centrar("|        8. N Numeros Primers             |"));
+    Console.WriteLine(Centrar("|                                         |"));
+    Console.WriteLine(Centrar("|        9. SORTIR                        |"));
+    Console.WriteLine(Centrar("|-----------------------------------------|"));
+
+}
+
+
+
+// CENTRAR
+static string Centrar(string valor)
+{
+    int longitud = (valor.Length + 80) / 2;
+    string cadenaAmbEspais = valor.PadLeft(longitud);
+    return cadenaAmbEspais;
 }
 
 // TEMPS ESPERA
@@ -98,7 +178,7 @@ static void CompteEnrera()
         Console.Write("\r");
         Console.Write(num);
         Thread.Sleep(1000);
-        
+
         num--;
     }
 }
@@ -115,7 +195,7 @@ static double Maxim(double a, double b)
 }
 
 // [2] CALCULAR EL MAXIM COMU DIVISOR
-static int Mcd (int num1,int num2)
+static int Mcd(int num1, int num2)
 {
     while (num2 != 0)
     {
@@ -182,7 +262,7 @@ static bool EsPrimer(int num1)
     {
         return NoEs;
     }
-        
+
     for (int i = 2; i <= Math.Sqrt(num1); i++)
     {
         if (num1 % i == 0)
@@ -194,6 +274,31 @@ static bool EsPrimer(int num1)
     return true;
 }
 
+// [8] CALCULAR N NUMEROS PRIMERS
+static string NnumerosPrimers(int numDonat, int QuantsNums)
+{
+    string valors = "";
+    if (QuantsNums <= 0)
+    {
+        return "ERROR";
+    }
 
+    int primersTrobats = 0;
 
-// [0] SORTIDA
+    while (primersTrobats < QuantsNums)
+    {
+        if (EsPrimer(numDonat))
+        {
+            primersTrobats++;
+            valors += Convert.ToString(numDonat + " ");
+        }
+
+        numDonat++;
+    }
+    return valors;
+
+    if (primersTrobats <= 0)
+    {
+        return "ERROR";
+    }
+}

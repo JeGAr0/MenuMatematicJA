@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = interfaz
-build_property.ProjectDir = C:\Users\JEAG\Documents\IES_MONTILIVI\MP03\C#\MenuMatematic\interfaz\
+build_property.ProjectDir = C:\Users\JEAG\Documents\IES_MONTILIVI\MP03\MenuMatematic\MenuMatematicJA\MenuMatematic\interfaz\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
