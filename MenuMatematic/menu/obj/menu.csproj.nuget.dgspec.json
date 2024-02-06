@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP03\\MenuMatematic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj": {}
+    "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP05\\git-grafic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP03\\MenuMatematic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj": {
+    "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP05\\git-grafic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP03\\MenuMatematic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj",
+        "projectUniqueName": "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP05\\git-grafic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj",
         "projectName": "menu",
-        "projectPath": "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP03\\MenuMatematic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj",
+        "projectPath": "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP05\\git-grafic\\MenuMatematicJA\\MenuMatematic\\menu\\menu.csproj",
         "packagesPath": "C:\\Users\\JEAG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP03\\MenuMatematic\\MenuMatematicJA\\MenuMatematic\\menu\\obj\\",
+        "outputPath": "C:\\Users\\JEAG\\Documents\\IES_MONTILIVI\\MP05\\git-grafic\\MenuMatematicJA\\MenuMatematic\\menu\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
